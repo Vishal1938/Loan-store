@@ -25,7 +25,7 @@ public class Loan {
     private LocalDate dueDate;
     private BigDecimal penaltyPerDay;
     private boolean canceled;
-    
+    private String status;
     
 	public Loan() {
 		super();
@@ -34,7 +34,7 @@ public class Loan {
 	
 	public Loan(Long id, String loanId, String customerId, String lenderId, BigDecimal amount,
 			BigDecimal remainingAmount, LocalDate paymentDate, int interestPerDay, LocalDate dueDate,
-			BigDecimal penaltyPerDay, boolean canceled) {
+			BigDecimal penaltyPerDay, boolean canceled,String status) {
 		super();
 		this.id = id;
 		this.loanId = loanId;
@@ -47,6 +47,7 @@ public class Loan {
 		this.dueDate = dueDate;
 		this.penaltyPerDay = penaltyPerDay;
 		this.canceled = canceled;
+		this.status=status;
 	}
 	public Long getId() {
 		return id;
@@ -114,6 +115,11 @@ public class Loan {
 	public void setCanceled(boolean canceled) {
 		this.canceled = canceled;
 	}
-
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
     
 }
